@@ -1,0 +1,14 @@
+name: ${project.name}
+version: ${project.version}
+author: AJ Fite
+description: ${project.description}
+main: org.nclfminecraft.bukkitintegration.Main
+
+commands:
+    nclfaccount:
+        description: Access NCLF account functions.
+        usage: |
+           /<command> help - Command help and registration info
+           /<command> status - Account status
+           /<command> link - Link your accounts
+           /<command> unlink - Unlink your accounts
