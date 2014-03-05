@@ -56,6 +56,9 @@ public class AccountCommandExecutor implements CommandExecutor {
     private boolean status(CommandSender cs, String[] args) {
         AccountResponse info;
         
+        //todo: implement others
+        //FIXME: Permissions
+        
         if(!(cs instanceof Player)) {
             return false;
         }

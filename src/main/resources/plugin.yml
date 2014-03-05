@@ -12,3 +12,29 @@ commands:
            /<command> status - Account status
            /<command> link - Link your accounts
            /<command> unlink - Unlink your accounts
+           
+permissions:
+    nclfaccount.*:
+        description: Gives access to all NCLF Account functions
+        children:
+            nclfaccount.status.others: true
+            nclfaccount.help: true
+            nclfaccount.status: true
+            nclfaccount.link: true11
+            nclfaccount.unlink: true
+    nclfaccount.status:
+        description: Allows user to check their account status
+        default: true
+    nclfaccount.link:
+        description: Allows user to link their account
+        default: true
+    nclfaccount.unlink:
+        description: Allows user to unlink their account
+    nclfaccount.help:
+        description: Displays help and information about accounts
+        default: true
+    nclfaccount.status.others:
+        description: allows user to query the accounts of other users
+        default: op
+        children:
+            nclfaccount.status: true
