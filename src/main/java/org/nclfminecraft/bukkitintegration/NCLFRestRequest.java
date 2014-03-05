@@ -32,26 +32,38 @@ public class NCLFRestRequest {
         this.target = client.target("https://testing.nclfminecraft.org/api/minecraft");
     }
     
+    /**
+     * Builds a Webtarget for the user Minecraft API
+     * @param UUID
+     * @return 
+     */
     private WebTarget UserRequest(String UUID) {
         WebTarget res = this.target.path("user");
         return res.path(UUID);
     }
-
-    public AccountResponse getAccount(String UUID) {
-        WebTarget reqtarget = UserRequest(UUID);
-        
-        Invocation.Builder invocBuild = reqtarget.request(MediaType.APPLICATION_JSON_TYPE);
+    
+    /**
+     * Gets a JsonObject at the requested target
+     * @param target
+     * @return 
+     */
+    private JsonObject GetJSON(WebTarget target) {
+        Invocation.Builder invocBuild = target.request(MediaType.APPLICATION_JSON_TYPE);
         String data = invocBuild.get().readEntity(String.class);
         
         JsonReader jr = Json.createReader(new StringReader(data));
-        JsonObject object = jr.readObject();
+        return jr.readObject();
+    }
+
+    public AccountResponse getAccount(String UUID) {
+        WebTarget reqtarget = UserRequest(UUID);
+        JsonObject object = GetJSON(reqtarget);
         
         AccountResponse account = new AccountResponse(object);
         
         return account;
     }
 
-    //TODO: getAccount
     //TODO: putAccount
     //TODO: getVerify
     //TODO: putVerify
