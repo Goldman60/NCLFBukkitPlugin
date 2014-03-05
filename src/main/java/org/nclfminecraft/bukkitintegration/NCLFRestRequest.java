@@ -4,6 +4,7 @@
  */
 package org.nclfminecraft.bukkitintegration;
 
+import org.nclfminecraft.bukkitintegration.responses.AccountResponse;
 import java.io.StringReader;
 import java.security.NoSuchAlgorithmException;
 import javax.json.Json;

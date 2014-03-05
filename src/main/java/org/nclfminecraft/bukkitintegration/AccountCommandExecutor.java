@@ -1,5 +1,6 @@
 package org.nclfminecraft.bukkitintegration;
 
+import org.nclfminecraft.bukkitintegration.responses.AccountResponse;
 import java.security.NoSuchAlgorithmException;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

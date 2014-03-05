@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package org.nclfminecraft.bukkitintegration;
+package org.nclfminecraft.bukkitintegration.responses;
 
 import java.util.Date;
 
