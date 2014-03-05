@@ -15,6 +15,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
+import org.bukkit.entity.Player;
 
 /**
  *
@@ -64,9 +65,33 @@ public class NCLFRestRequest {
         return account;
     }
 
-    //TODO: putAccount
-    //TODO: getVerify
-    //TODO: putVerify
-    //TODO: deleteVerify
-    //TODO: Class to hold response objects, account etc.
+    public boolean postAccount(Player player) {
+        
+        //TODO: Build JSON object and POST it to the server
+        
+        return false;
+    }
+    
+    public Object getLink(String UUID) {
+        
+        //TODO: Get to server for link or status if linked
+        
+        //TODO: Need a response object
+        
+        return null;
+    }
+    
+    public boolean postLink(Player player, String linkcode) {
+        
+        //TODO: Post link code to server and ask for response
+        
+        return false;
+    }
+    
+    public boolean deleteLink(Player player) {
+       
+        //TODO: delete link (unlink)
+        
+        return false;
+    }
 }
