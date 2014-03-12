@@ -68,7 +68,12 @@ public class NCLFRestRequest {
 
     public boolean postAccount(Player player) {
         
-        //TODO: Build JSON object and POST it to the server
+        String uuid = player.getUniqueId().toString();
+        String current_name = player.getName();
+        
+        WebTarget targ = UserRequest(uuid);
+        
+        //Post data
         
         return false;
     }
