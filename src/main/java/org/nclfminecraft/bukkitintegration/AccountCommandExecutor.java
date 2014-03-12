@@ -68,13 +68,15 @@ public class AccountCommandExecutor implements CommandExecutor {
         try {
            info = new NCLFRestRequest().getAccount(player.getUniqueId().toString());
         } catch (NoSuchAlgorithmException ex) {
-           info = null;
+           cs.sendMessage("An internal error has occured!");
+           
+           return true;
         }
         
-        if(info.getError() == null && info.getData().getUser_id() != null) {
-            cs.sendMessage("Your account is linked to " + info.getData().getId());
-        } else {
+        if(info.getError() != null && info.getData().getUser_id() == null) {
             cs.sendMessage("Your account is not linked!");
+        } else {
+            cs.sendMessage("Your account is linked to " + info.getData().getId());
         }
         
         return true;
