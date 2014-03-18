@@ -10,7 +10,7 @@ package org.nclfminecraft.bukkitintegration;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-/**
+/** 
  *
  * @author AJ
  */
