@@ -1,3 +1,5 @@
+Though this plugin never really was much, development has been permanently halted due to the demise of Bukkit
+
 # About
 
 The NCLF Bukkit connector
